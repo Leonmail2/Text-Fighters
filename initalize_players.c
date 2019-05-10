@@ -169,6 +169,7 @@ void printClassVs(struct match game){
 		break;
 	}
 }
+
 int dead(struct match game, int playernumber){
 	switch(playernumber){
 		case 1:
@@ -200,6 +201,8 @@ int initgame(){
 	printClassVs(game);
 	return game;
 }
+
+
 
 
 
