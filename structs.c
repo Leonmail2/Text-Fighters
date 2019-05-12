@@ -1,10 +1,9 @@
 /*
 structs.h
 
-Liam Muir,
-2019-05-12
+Liam Muir,2019
 
-A header file to define structs used by the program.
+A header file to define structs used by the whole program.
 */
 
 
