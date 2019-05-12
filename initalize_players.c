@@ -3,23 +3,14 @@ initalize_players.c
 
 Liam Muir, 2019
 
-functions to initalize player data.
+implementations of functions to initalize player data.
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "initalize_players.h"
 #include "structs.h"
-
-#define MAGE 1
-#define KNIGHT 2
-#define ARCHER 3
-#define EASY 1
-#define MID 2
-#define HARD 3
-#define POTION 1
-#define MAGIC 2
-#define GAUNT 3
 
 const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
 const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
@@ -128,7 +119,7 @@ int getBeginData(char* question,char* option_one, char* option_two, char* option
 	return 0;
 }
 
-struct player beginPlayer(){ //handles the begining text and	gets players choice 
+struct player beginPlayer(){ //handles the begining text and gets players choice 
 	int class = getBeginData("Choose Your Fighter!","mage","knight","archer",helpClass);
 	int perk = getBeginData("Choose Your Special Perk!","healing potions","magic weapons","gauntlets",helpPerks);
 	struct player newplayer;
@@ -137,7 +128,7 @@ struct player beginPlayer(){ //handles the begining text and	gets players choice
 	return newplayer;
 }
 
-void printClassVs(struct match game){
+void printClassVs(struct match game){ //prints versus message
 	switch(game.p1.class){
 		case MAGE:
 		printf("\nMage");
@@ -163,28 +154,7 @@ void printClassVs(struct match game){
 	}
 }
 
-int dead(struct match game, int playernumber){
-	switch(playernumber){
-		case 1:
-		if (game.p1.hp == 0){
-			return 1;
-		}else{
-			return 0;
-		}
-		break;
-		case 2:
-		if (game.p2.hp == 0){
-			return 1;
-		}else{
-			return 0;
-		}
-		break;
-		default:
-		return -1;
-	}
-}
-
-int initgame(){
+int initgame(){ //initalizes game
 	struct match game;
 	printf("\nWelcome to Text Fighters!\n");
 	printf("\nPlayer one,\n");
