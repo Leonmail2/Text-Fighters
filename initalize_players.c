@@ -1,7 +1,30 @@
 /*
-initalize_players.c:
+initalize_players.c
 
 Liam Muir, 2019
+
+functions to initalize player data.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "structs.h"
+
+#define MAGE 1
+#define KNIGHT 2
+#define ARCHER 3
+#define EASY 1
+#define MID 2
+#define HARD 3
+#define POTION 1
+#define MAGIC 2
+#define GAUNT 3
+
+const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
+const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
+
+/*
 
 Interface Idea:
 
@@ -80,35 +103,6 @@ You died! (end)
 <if not dead>
 (repeat)
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#define MAGE 1
-#define KNIGHT 2
-#define ARCHER 3
-#define EASY 1
-#define MID 2
-#define HARD 3
-#define POTION 1
-#define MAGIC 2
-#define GAUNT 3
-
-const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
-const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
-
-struct player{
-	int hp;
-	int class;
-	int perk;
-};
-
-struct match{
-	struct player p1;
-	struct player p2;
-	int distance_between;
-};
 
 int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for question asking
 	while(1){

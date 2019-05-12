@@ -8,10 +8,11 @@ main file to launch game.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "structs.c"
+#include "structs.h"
 #include "initalize_players.c"
+#include "core_logic.c"
 
 int main(){
-	//main program flow logic
+	//main program logic
 	return 0;
 }
