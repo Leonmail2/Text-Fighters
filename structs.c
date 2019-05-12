@@ -1,3 +1,13 @@
+/*
+structs.h
+
+Liam Muir,
+2019-05-12
+
+A header file to define structs used by the program.
+*/
+
+
 #define MAGE 1
 #define KNIGHT 2
 #define ARCHER 3
