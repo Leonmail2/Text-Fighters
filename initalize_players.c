@@ -1,6 +1,5 @@
 /*
-Text Fighters!
-A text based fantasy fighting game.
+initalize_players.c:
 
 Liam Muir, 2019
 

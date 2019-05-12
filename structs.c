@@ -3,7 +3,7 @@ structs.h
 
 Liam Muir, 2019,
 
-A header file to define structs used by the whole program.
+A header file that defines structs used by the whole program.
 */
 
 
