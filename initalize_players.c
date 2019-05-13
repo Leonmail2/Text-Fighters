@@ -13,8 +13,8 @@ implementations of functions to initalize player data.
 #include "structs.h"
 
 #define MAGE 1
-#define ARCHER 2
-#define KNIGHT 3
+#define KNIGHT 2
+#define ARCHER 3
 
 const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
 const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
