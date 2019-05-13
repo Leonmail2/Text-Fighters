@@ -6,11 +6,14 @@ Liam Muir, 2019
 implementations of functions to initalize player data.
 */
 
+#ifndef INITALIZE_PLAYERS
+#define INITALIZE_PLAYERS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "initalize_players.h"
-#include "structs.h"
+#include "structs.c"
 
 
 
@@ -94,11 +97,13 @@ You died! (end)
 (repeat)
 */
 
-int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text);//general logic for question asking
+static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text);//general logic for question asking
 	
 
-struct player beginPlayer(); //handles the begining text and gets players choice 
+static struct player beginPlayer(); //handles the begining text and gets players choice 
 
-void printClassVs(struct match game); //prints versus message
+static void printClassVs(struct match game); //prints versus message
 
-int initgame(); //initalizes game
+struct match initgame(); //initalizes game
+
+#endif

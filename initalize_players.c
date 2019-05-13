@@ -10,7 +10,7 @@ implementations of functions to initalize player data.
 #include <stdlib.h>
 #include <string.h>
 #include "initalize_players.h"
-#include "structs.h"
+#include "structs.c"
 
 const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
 const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
@@ -95,7 +95,7 @@ You died! (end)
 (repeat)
 */
 
-int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for question asking
+static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for question asking
 	while(1){
 		printf("\n%s\n\n", question);
 		printf("1:%s, 2:%s, 3:%s, 4:help:", option_one, option_two, option_three);
@@ -119,7 +119,7 @@ int getBeginData(char* question,char* option_one, char* option_two, char* option
 	return 0;
 }
 
-struct player beginPlayer(){ //handles the begining text and gets players choice 
+static struct player beginPlayer(){ //handles the begining text and gets players choice 
 	int class = getBeginData("Choose Your Fighter!","mage","knight","archer",helpClass);
 	int perk = getBeginData("Choose Your Special Perk!","healing potions","magic weapons","gauntlets",helpPerks);
 	struct player newplayer;
@@ -128,7 +128,7 @@ struct player beginPlayer(){ //handles the begining text and gets players choice
 	return newplayer;
 }
 
-void printClassVs(struct match game){ //prints versus message
+static void printClassVs(struct match game){ //prints versus message
 	switch(game.p1.class){
 		case MAGE:
 		printf("\nMage");
@@ -154,7 +154,7 @@ void printClassVs(struct match game){ //prints versus message
 	}
 }
 
-int initgame(){ //initalizes game
+struct match initgame(){ //initalizes game
 	struct match game;
 	printf("\nWelcome to Text Fighters!\n");
 	printf("\nPlayer one,\n");

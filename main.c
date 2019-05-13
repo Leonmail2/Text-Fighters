@@ -8,7 +8,7 @@ main file to launch game.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "structs.h"
+#include "structs.c"
 #include "initalize_players.c"
 #include "core_logic.c"
 
