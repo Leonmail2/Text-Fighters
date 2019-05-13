@@ -102,7 +102,7 @@ You died! (end)
 static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for question asking
 	while(1){
 		printf("\n%s\n\n", question);
-		printf("1:%s, 2:%s, 3:%s, 4:help:", option_one, option_two, option_three);
+		printf("1:%s, 2:%s, 3:%s, 4:help: ", option_one, option_two, option_three);
 		int answer;
 		scanf("%i", &answer);
 			switch(answer){
