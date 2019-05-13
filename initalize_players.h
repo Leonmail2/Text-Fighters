@@ -100,10 +100,10 @@ You died! (end)
 static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text);//general logic for question asking
 	
 
-static struct player beginPlayer(); //handles the begining text and gets players choice 
+static struct player* beginPlayer(); //handles the begining text and gets players choice 
 
-static void printClassVs(struct match game); //prints versus message
+static void printClassVs(struct match* game); //prints versus message
 
-struct match initgame(); //initalizes game
+struct match* initgame(); //initalizes game
 
 #endif
