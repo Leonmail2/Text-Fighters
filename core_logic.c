@@ -9,7 +9,7 @@ implementations of functions that are used as the main logic while game is in pr
 #include <stdio.h>
 #include <stdlib.h>
 #include "core_logic.h"
-#include "structs.c"
+#include "structs.h"
 
 /*
 match* turn(int player, match* game)

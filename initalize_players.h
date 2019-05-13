@@ -13,7 +13,7 @@ implementations of functions to initalize player data.
 #include <stdlib.h>
 #include <string.h>
 #include "initalize_players.h"
-#include "structs.c"
+#include "structs.h"
 
 
 
