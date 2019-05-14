@@ -27,7 +27,7 @@ int main(){
 		}
 		resolve(game); //say who won
 		free(game);
-		if (){ //if player does not wants to play again
+		if (!playagain()){ //if player does not wants to play again
 			break; //end game
 		}
 	}
