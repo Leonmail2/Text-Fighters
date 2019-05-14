@@ -6,6 +6,8 @@ struct match* turn(int player, struct match* game); //deals with input and actio
 
 int dead(int player, struct match* game); //chects if player is dead
 
-void resolve(struct match* game);
+void resolve(struct match* game); //says who won
+
+int playagain(); //asks player if they want to play again
 
 #endif
