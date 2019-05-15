@@ -4,6 +4,8 @@ initalize_players.c
 Liam Muir, 2019
 
 implementations of functions to initalize player data.
+
+1 is healing potions, 2 is magic weapons, 3 is gauntlets
 */
 
 #include <stdio.h>
