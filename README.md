@@ -37,8 +37,8 @@ for archer
 3. Block
 4. Move Away
 5. Move Forward
-6. (insert special perk, magic does not show up here)
-7. Status
+6. Status
+7. (insert special perk, magic does not show up here)
 
 for knight
 
@@ -47,8 +47,8 @@ for knight
 3. Block
 4. Move Away
 5. Move Forward
-6. (insert special perk, magic does not show up here)
-7. Status
+6. Status
+7. (insert special perk, magic does not show up here)
 
 for mage
 
@@ -57,8 +57,8 @@ for mage
 3. Block
 4. Move Away (this will randomly move 1 or 2 back)
 5. Move Forward (this will randomly move 1 or 2 forwards)
-6. (insert special perk, magic does not show up here)
-7. Status
+6. Status
+7. (insert special perk, magic does not show up here)
 
 when status is selected
 
