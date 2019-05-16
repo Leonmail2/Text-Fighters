@@ -13,13 +13,14 @@ implementations of functions to initalize player data.
 #include <string.h>
 #include "initalize_players.h"
 #include "structs.h"
+#include "combat_data.h"
 
 #define MAGE 1
 #define KNIGHT 2
 #define ARCHER 3
 
-const char* helpClass = "The character you choose determines the attacks you can use and the HP you have.\nThe mage has fireball, staff, and has 30 HP.\nThe knight has sword, lance, and has 40 HP.\nThe archer has bow, dagger, and has 35 HP";
-const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when used.";
+const char* helpClass = "The character you choose determines the attacks you can use, the HP you have, and your AC.\nThe mage has fireball, staff, 30 HP and an AC of 11.\nThe knight has sword, lance, 40 HP and an AC of 14.\nThe archer has bow, dagger, 35 HP and an AC of 12";
+const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %20 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when hit.";
 
 static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for three choice question asking
 	while(1){
@@ -27,7 +28,7 @@ static int getBeginData(char* question,char* option_one, char* option_two, char*
 		printf("1:%s, 2:%s, 3:%s, 4:help: ", option_one, option_two, option_three);
 		int answer;
 		scanf("%i", &answer);
-			switch(answer){
+			switch(answer){i
 			case 1:
 			return 1; 
 			break;
@@ -51,6 +52,7 @@ static struct player* beginPlayer(){ //handles the begining text and gets player
 	struct player newplayer = malloc(sizeof(struct player));
 	newplayer->class = class;
 	newplayer->perk = perk;
+	newplayer->ac = actable[class];
 	return newplayer;
 }
 
