@@ -5,13 +5,19 @@ struct attack{
 	//data for attack
 	int range;
 	int bonus;
-}
+};
+
+struct dice{
+	int min;
+	int max;
+};
 
 struct player{
 	int hp;
 	int ac;
 	int class;
 	int perk;
+	int healing_potions;
 };
 
 struct match{
