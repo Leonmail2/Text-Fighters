@@ -1,11 +1,19 @@
-#Daily Goals
+# Work Plan
 
-##Wednsday, May 22
+## Week One (May 21 - May 27): 
 
-##Thursday, May 23
+## Week Two (May 28 - June 3):
 
-##Friday, May 24
+## Week Three (June 4 - June 10):
 
-##Saturday, May 25
+# Daily Goals
 
-##Sunday, May 26
+## Wednsday, May 22
+
+## Thursday, May 23
+
+## Friday, May 24
+
+## Saturday, May 25
+
+## Sunday, May 26
