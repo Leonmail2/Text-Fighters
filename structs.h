@@ -1,16 +1,5 @@
-#ifndef STRUCTS
-#define STRUCTS
-
-struct attack{
-	//data for attack
-	int range;
-	int bonus;
-};
-
-struct dice{
-	int min;
-	int max;
-};
+#ifndef __STRUCTS__
+#define __STRUCTS__
 
 struct player{
 	int hp;

@@ -3,6 +3,13 @@ all: text_fighters
 run: text_fighters
 	./text_fighters
 
+test: core_logic.o initalize_players.o test.o
+	gcc core_logic.o initalize_players.o test.o -o test
+	./test
+
+test.o: test.c
+	gcc -c test.c
+
 text_fighters: core_logic.o initalize_players.o main.o
 	gcc core_logic.o initalize_players.o main.o -o text_fighters
 

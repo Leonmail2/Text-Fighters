@@ -6,8 +6,8 @@ Liam Muir, 2019
 implementations of functions to initalize player data.
 */
 
-#ifndef INITALIZE_PLAYERS
-#define INITALIZE_PLAYERS
+#ifndef __INITALIZE_PLAYERS__
+#define __INITALIZE_PLAYERS__
 
 #include <stdio.h>
 #include <stdlib.h>

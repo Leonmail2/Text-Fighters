@@ -7,8 +7,8 @@ the header for core_logic.h
 */
 
 
-#ifndef CORE_LOGIC
-#define CORE_LOGIC
+#ifndef __CORE_LOGIC__
+#define __CORE_LOGIC__
 
 #include "structs.h"
 

@@ -7,11 +7,19 @@ A file to
 */
 
 
-#ifndef COMBAT_DATA
-#define COMBAT_DATA
+#ifndef __COMBAT_DATA__
+#define __COMBAT_DATA__
 
-#include "structs.h"
-#include "combat_data.h"
+struct attack{
+	//data for attack
+	int range;
+	int bonus;
+};
+
+struct dice{
+	int min;
+	int max;
+};
 
 struct attack attacktable[6] = {{3,2},{1,1},{1,3},{2,2},{5,-2},{1,3}}; //starts with fireball, goes to dagger, in up-down, left right order,
 //struct order is range, bonus
