@@ -1,3 +1,11 @@
+/*
+structs.h
+
+Liam Muir, 2019
+
+include in all files that use player structs.
+*/
+
 #ifndef __STRUCTS__
 #define __STRUCTS__
 

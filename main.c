@@ -14,6 +14,8 @@ main file to launch game.
 
 int main(){
 	/*
+	Proposed logic
+
 	while(1){ //when game is over start here again
 	struct match* game = initgame();
 		while(1){ //main loop for the cycle of play

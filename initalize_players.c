@@ -11,9 +11,10 @@ implementations of functions to initalize player data.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "initalize_players.h"
 #include "structs.h"
-#include "combat_data.h"
+#include "initalize_players.h"
+
+int actableinit[3] = {11,14,12}; //based on numbers for each class offered on help string, goes in order of mage, knight, archer
 
 #define MAGE 1
 #define KNIGHT 2
@@ -52,7 +53,7 @@ static struct player* beginPlayer(){ //handles the begining text and gets player
 	struct player* newplayer = calloc(1,sizeof(struct player));
 	newplayer->class = class;
 	newplayer->perk = perk;
-	newplayer->ac = actable[class];
+	newplayer->ac = actableinit[class];
 	if (perk == 1)
 		newplayer->healing_potions = 3;
 	return newplayer;
