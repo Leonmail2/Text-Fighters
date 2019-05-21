@@ -13,6 +13,7 @@ main file to launch game.
 #include "core_logic.h"
 
 int main(){
+	/*
 	while(1){ //when game is over start here again
 	struct match* game = initgame();
 		while(1){ //main loop for the cycle of play
@@ -31,5 +32,6 @@ int main(){
 			break; //end game
 		}
 	}
+	*/
 	return 0;
 }
