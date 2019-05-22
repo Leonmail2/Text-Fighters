@@ -31,7 +31,7 @@ Compiling produced a duplicate symbols error, problem was a file that was includ
 
 ## Wednsday, May 22
 
-Work on print menu, and print status
+Work on implementing print menu and print status functions, and ensure they work.
 
 ## Thursday, May 23
 
