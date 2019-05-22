@@ -28,7 +28,7 @@ Compiling produced a duplicate symbols error, problem was a file that was includ
 
 ## Wednsday, May 22
 
-Work on implementing print menu and print status functions, and ensure they print the correct data according to the README.
+Work on implementing print menu and print status functions, and ensure they print the correct data in the format of the README.
 
 ## Thursday, May 23
 
