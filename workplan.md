@@ -18,9 +18,6 @@ System test TODO
 
 Integrate combat functions into turn function. TODO
 
-
-
-
 ## Week Three (June 4 - June 10):
 
 # Daily Goals
@@ -31,7 +28,7 @@ Compiling produced a duplicate symbols error, problem was a file that was includ
 
 ## Wednsday, May 22
 
-Work on implementing print menu and print status functions, and ensure they work.
+Work on implementing print menu and print status functions, and ensure they print the correct data according to the README.
 
 ## Thursday, May 23
 
