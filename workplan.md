@@ -2,9 +2,24 @@
 
 ## Week One (May 21 - May 27): 
 
-Ensure current code works and meshes together well. When this is done, work on print_data and  
+Ensure current code works and meshes together well. Done.
+
+When this is done, work on print_menu and print_status. TODO
+
+Once done, integrate functions into turn function. TODO
+
+After the integration, work on creating combat functions for turn function. TODO
 
 ## Week Two (May 28 - June 3):
+
+Work some more on specific combat functions. TODO
+
+System test TODO
+
+Integrate combat functions into turn function. TODO
+
+
+
 
 ## Week Three (June 4 - June 10):
 
