@@ -16,12 +16,8 @@ implementations of functions to initalize player data.
 
 int actableinit[3] = {11,14,12}; //based on numbers for each class offered on help string, goes in order of mage, knight, archer
 
-#define MAGE 1
-#define KNIGHT 2
-#define ARCHER 3
-
 const char* helpClass = "The character you choose determines the attacks you can use, the HP you have, and your AC.\nThe mage has fireball, staff, 30 HP and an AC of 11.\nThe knight has sword, lance, 40 HP and an AC of 14.\nThe archer has bow, dagger, 35 HP and an AC of 12";
-const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal %25 percent more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when hit.";
+const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when hit.";
 
 static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text){//general logic for three choice question asking
 	while(1){

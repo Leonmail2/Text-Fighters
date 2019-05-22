@@ -35,8 +35,8 @@ for archer
 1. Bow
 2. Dagger
 3. Block
-4. Move Away
-5. Move Forward
+4. Move Forwards (this will randomly move 1 or 2 forwards)
+5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
 7. (insert special perk, magic does not show up here)
 
@@ -45,8 +45,8 @@ for knight
 1. Sword
 2. Lance
 3. Block
-4. Move Away
-5. Move Forward
+4. Move Forwards (this will randomly move 1 or 2 forwards)
+5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
 7. (insert special perk, magic does not show up here)
 
@@ -55,8 +55,8 @@ for mage
 1. Fireball
 2. Staff
 3. Block
-4. Move Away (this will randomly move 1 or 2 back)
-5. Move Forward (this will randomly move 1 or 2 forwards)
+4. Move Forwards (this will randomly move 1 or 2 forwards)
+5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
 7. (insert special perk, magic does not show up here)
 

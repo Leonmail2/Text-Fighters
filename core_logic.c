@@ -35,22 +35,70 @@ struct dice gauntlets = {3,7}; //one off for gauntlets perk
 struct dice healingpotion = {4,8}; //one off for healing perk
 
 static void print_menu(int player, struct match* game){
-	//if player is one, set player_data to the player one
-	//if player is two, set player_data to the player two
-	//print attack one
-	//print attack two
-	//print rest of stuff
-	//if special perk is gauntlets or magic potions, print here
-	//return
+
+	struct player player_data;
+	if (player == 1){	//if player is one, set player_data to the player one
+		struct player player_data = game->p1;
+	}else if(player == 2){//if player is two, set player_data to the player two
+		struct player player_data = game->p2;
+	}else{ //don't continue if different
+		return;
+	}
+
+	if (player_data.class == MAGE){ // if then else for printing the first two items
+		printf("1. Fireball\n2. Staff\n");
+	} else if (player_data.class == KNIGHT){
+		printf("1. Sword\n2. Lance\n");
+	} else if (player_data.class == MAGE){
+		printf("1. Bow\n2. Dagger\n");
+	}
+
+	printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status"); //prints rest of regular actions
+
+	if (player_data.perk == GAUNT){ //if else for special perks that give an extra action
+		printf("7. Gauntlets\n");
+	} else if(player_data.perk == HEAL){
+		if (player_data.healing_potions > 0){
+			printf("7. Healing Potions\n");
+		}		
+	}
+	return;
 }
 
 static void print_status(int player, struct match* game){
 	//if player is one, set player_data_a to the player one and set player_data_b to the player two
 	//if player is two, set player_data_a to the player two and set player_data_b to the player ones
+	struct player player_data_a;
+	struct player player_data _b;
+	if (player == 1){
+		player_data_a = game->p1;
+		player_data_b = game->p2;
+	}else if(player == 2){
+		player_data_a = game->p2;
+		player_data_b = game->p1;
+	}else{ //don't continue if number is not in range
+		return;
+	}
+
+
 	//print a health
-	//print b ac
+	printf("HP: %i\n", player_data_a.hp);
+	//print a ac
+	printf("AC: %i\n", player_data_a.ac);
+	//print healing potions if a has the perk
+	if(player_data_a.perk == HEAL){
+		printf("Healing Potions Left: %i\n", player_data_a.healing_potions);
+	}
 	//print b health
+	printf("Opponents HP: %i\n", player_data_b.hp);
 	//print b ac
+	printf("Opponents AC: %i\n", player_data_b.ac);
+
+	//print healing potions if b has the perk
+	if(player_data_b.perk == HEAL){
+		printf("Opponents Healing Potions Left: %i\n", player_data_b.healing_potions);
+	}
+	return;
 }
 
 struct match* turn(int player, struct match* game){ //deals with input and actions of player one or two
