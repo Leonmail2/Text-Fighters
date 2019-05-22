@@ -25,7 +25,13 @@ Integrate combat functions into turn function. TODO
 
 # Daily Goals
 
+## Tuesday, May 21
+
+Compiling produced a duplicate symbols error, problem was a file that was included twice.
+
 ## Wednsday, May 22
+
+Work on print menu, and print status
 
 ## Thursday, May 23
 
