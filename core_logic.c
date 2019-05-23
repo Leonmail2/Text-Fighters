@@ -34,7 +34,7 @@ struct dice gauntlets = {3,7}; //one off for gauntlets perk
 
 struct dice healingpotion = {4,8}; //one off for healing perk
 
-static void print_menu(int player, struct match* game){
+void print_menu(int player, struct match* game){
 
 	struct player player_data;
 	if (player == 1){	//if player is one, set player_data to the player one
@@ -65,11 +65,12 @@ static void print_menu(int player, struct match* game){
 	return;
 }
 
-static void print_status(int player, struct match* game){
+void print_status(int player, struct match* game){
 	//if player is one, set player_data_a to the player one and set player_data_b to the player two
 	//if player is two, set player_data_a to the player two and set player_data_b to the player ones
 	struct player player_data_a;
-	struct player player_data _b;
+	struct player player_data_b;
+	printf("%i %i",game->p1.class, game->p2.class);
 	if (player == 1){
 		player_data_a = game->p1;
 		player_data_b = game->p2;

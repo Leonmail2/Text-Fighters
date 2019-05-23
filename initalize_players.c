@@ -15,6 +15,8 @@ implementations of functions to initalize player data.
 #include "initalize_players.h"
 
 int actableinit[3] = {11,14,12}; //based on numbers for each class offered on help string, goes in order of mage, knight, archer
+int hptableinit[3] = {30,40,35};
+
 
 const char* helpClass = "The character you choose determines the attacks you can use, the HP you have, and your AC.\nThe mage has fireball, staff, 30 HP and an AC of 11.\nThe knight has sword, lance, 40 HP and an AC of 14.\nThe archer has bow, dagger, 35 HP and an AC of 12";
 const char* helpPerks = "The perk you choose determines the special actions you can take to give you an edge against your opponent\nYou get three healing potions that heal 4-8 HP each if you choose healing.\nThe magic weapons deal more damage than normal.\nThe gauntlets allow you to punch your opponents, dealing 3-7 damage when hit.";
@@ -50,6 +52,7 @@ static struct player* beginPlayer(){ //handles the begining text and gets player
 	newplayer->class = class;
 	newplayer->perk = perk;
 	newplayer->ac = actableinit[class];
+	newplayer->hp = hptableinit[class];
 	if (perk == 1)
 		newplayer->healing_potions = 3;
 	return newplayer;

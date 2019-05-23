@@ -32,6 +32,8 @@ Work on implementing print menu and print status functions, and ensure they prin
 
 ## Thursday, May 23
 
+Finish testing and debugging
+
 ## Friday, May 24
 
 ## Saturday, May 25
