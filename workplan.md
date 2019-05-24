@@ -36,6 +36,8 @@ Finish testing and debugging
 
 ## Friday, May 24
 
+Work on combat system.
+
 ## Saturday, May 25
 
 ## Sunday, May 26
