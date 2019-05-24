@@ -6,6 +6,7 @@ run: text_fighters
 test: core_logic.o initalize_players.o test.o
 	gcc core_logic.o initalize_players.o test.o -o test
 	./test
+	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch test test.o
 
 test.o: test.c
 	gcc -c test.c
