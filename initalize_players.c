@@ -51,8 +51,8 @@ static struct player* beginPlayer(){ //handles the begining text and gets player
 	struct player* newplayer = calloc(1,sizeof(struct player));
 	newplayer->class = class;
 	newplayer->perk = perk;
-	newplayer->ac = actableinit[class];
-	newplayer->hp = hptableinit[class];
+	newplayer->ac = actableinit[class-1];
+	newplayer->hp = hptableinit[class-1];
 	if (perk == 1)
 		newplayer->healing_potions = 3;
 	return newplayer;

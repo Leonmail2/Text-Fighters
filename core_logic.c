@@ -53,7 +53,7 @@ void print_menu(int player, struct match* game){
 		printf("1. Bow\n2. Dagger\n");
 	}
 
-	printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status"); //prints rest of regular actions
+	printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
 
 	if (player_data.perk == GAUNT){ //if else for special perks that give an extra action
 		printf("7. Gauntlets\n");
@@ -70,7 +70,6 @@ void print_status(int player, struct match* game){
 	//if player is two, set player_data_a to the player two and set player_data_b to the player ones
 	struct player player_data_a;
 	struct player player_data_b;
-	printf("%i %i",game->p1.class, game->p2.class);
 	if (player == 1){
 		player_data_a = game->p1;
 		player_data_b = game->p2;

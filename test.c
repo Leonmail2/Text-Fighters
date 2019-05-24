@@ -12,8 +12,6 @@ a test file to ensure that functions are working as expected
 
 int main(int argc, char const *argv[]){
 	struct match* p = initgame();
-	printf("%i %i",p->p1.class, p->p2.class);
-	printf("\n");
 	print_menu(1,p);
 	print_status(1,p);
 	print_menu(2,p);
