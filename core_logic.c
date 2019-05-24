@@ -36,32 +36,47 @@ struct dice healingpotion = {4,8}; //one off for healing perk
 
 void print_menu(int player, struct match* game){
 
-	struct player player_data;
-	if (player == 1){	//if player is one, set player_data to the player one
-		struct player player_data = game->p1;
-	}else if(player == 2){//if player is two, set player_data to the player two
-		struct player player_data = game->p2;
+	if (player == 1){	//if player is one, execute code for the player one
+		if (game->p1.class == MAGE){ // if then else for printing the first two items
+			printf("1. Fireball\n2. Staff\n");
+		} else if (game->p1.class == KNIGHT){
+			printf("1. Sword\n2. Lance\n");
+		} else if (game->p1.class == ARCHER){
+			printf("1. Bow\n2. Dagger\n");
+		}
+
+		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
+
+		if (game->p1.perk == GAUNT){ //if else for special perks that give an extra action
+			printf("7. Gauntlets\n");
+		} else if(game->p1.perk == HEAL){
+			if (game->p1.healing_potions > 0){
+				printf("7. Healing Potions\n");
+			}		
+		}
+	}else if(player == 2){//if player is two, execute instructions for the player two
+		if (game->p2.class == MAGE){ // if then else for printing the first two items
+			printf("1. Fireball\n2. Staff\n");
+		} else if (game->p2.class == KNIGHT){
+			printf("1. Sword\n2. Lance\n");
+		} else if (game->p2.class == ARCHER){
+			printf("1. Bow\n2. Dagger\n");
+		}
+
+		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
+
+		if (game->p2.perk == GAUNT){ //if else for special perks that give an extra action
+			printf("7. Gauntlets\n");
+		} else if(game->p2.perk == HEAL){
+			if (game->p2.healing_potions > 0){
+				printf("7. Healing Potions\n");
+			}		
+		}
 	}else{ //don't continue if different
 		return;
 	}
 
-	if (player_data.class == MAGE){ // if then else for printing the first two items
-		printf("1. Fireball\n2. Staff\n");
-	} else if (player_data.class == KNIGHT){
-		printf("1. Sword\n2. Lance\n");
-	} else if (player_data.class == MAGE){
-		printf("1. Bow\n2. Dagger\n");
-	}
-
-	printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
-
-	if (player_data.perk == GAUNT){ //if else for special perks that give an extra action
-		printf("7. Gauntlets\n");
-	} else if(player_data.perk == HEAL){
-		if (player_data.healing_potions > 0){
-			printf("7. Healing Potions\n");
-		}		
-	}
+	
 	return;
 }
 

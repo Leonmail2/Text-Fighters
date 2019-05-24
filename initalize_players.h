@@ -9,6 +9,10 @@ implementations of functions to initalize player data.
 #ifndef __INITALIZE_PLAYERS__
 #define __INITALIZE_PLAYERS__
 
+struct match;
+
+#include "structs.h"
+
 static int getBeginData(char* question,char* option_one, char* option_two, char* option_three, const char* help_text);//general logic for question asking
 	
 static struct player* beginPlayer(); //handles the begining text and gets players choice 

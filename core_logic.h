@@ -10,6 +10,10 @@ the header for core_logic.h
 #ifndef __CORE_LOGIC__
 #define __CORE_LOGIC__
 
+struct match;
+
+#include "structs.h"
+
 void print_menu(int player, struct match* game); //prints action menu
 
 void print_status(int player, struct match* game); //prints status of player
