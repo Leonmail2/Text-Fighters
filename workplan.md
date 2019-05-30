@@ -34,10 +34,6 @@ Work on implementing print menu and print status functions, and ensure they prin
 
 Finish testing and debugging
 
-## Friday, May 24
+## Thursday, May 30
 
-Work on combat system.
-
-## Saturday, May 25
-
-## Sunday, May 26
+Work on combat system
