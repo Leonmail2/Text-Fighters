@@ -27,6 +27,7 @@ after moving forwards, it sets the distance to 1)
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "structs.h"
 #include "core_logic.h"
 
@@ -52,6 +53,22 @@ struct dice dicetable[6] = {{5,7},{3,5},{5,6},{2,4},{6,7},{2,5}};//starts with f
 struct dice gauntlets = {3,7}; //one off for gauntlets perk
 
 struct dice healingpotion = {4,8}; //one off for healing perk
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+//combat helpers
+
+int dice(int min,int max){
+	//set seed to current time
+	time_t seed = time(NULL);
+	srandom(seed);
+	//uses seed for debuging purposes
+	//make random number p between min and max
+	//return the number
+	return (random() % (max - min))+min;
+}
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+//menu functions
 
 void print_menu(int player, struct match* game){
 
@@ -149,6 +166,9 @@ int get_input(){ //gets input after print menu
 	}
 }
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+//high level functions
+
 struct match* turn(int player, struct match* game){ //deals with input and actions of player one or two
 	//print list of actions based on player class and perk (calls print_menu)
 	//get input from command line
@@ -183,3 +203,5 @@ int playagain(){ //asks player if they want to play again
 	//if answer is y, return 1
 	//else return 0
 }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------

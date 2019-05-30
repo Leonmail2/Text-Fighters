@@ -14,6 +14,8 @@ struct match;
 
 #include "structs.h"
 
+int dice(int min, int max);
+
 void print_menu(int player, struct match* game); //prints action menu
 
 void print_status(int player, struct match* game); //prints status of player
