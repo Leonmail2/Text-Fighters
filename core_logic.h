@@ -18,6 +18,8 @@ void print_menu(int player, struct match* game); //prints action menu
 
 void print_status(int player, struct match* game); //prints status of player
 
+int get_input();
+
 struct match* turn(int player, struct match* game); //deals with input and actions of player one or two
 
 int dead(int player, struct match* game); //chects if player is dead

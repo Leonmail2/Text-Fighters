@@ -13,6 +13,8 @@ if the number exeeds the ac of the opponent, the attack hits.
 
 all weapons have a bonus to the attack roll, it is added. negative bonuses are allowed.
 
+if the player is not in range, alert player and return to menu
+
 the players can't move backwards if the distance is eight (to account for random 1 or 2 forwards or backwards, if the final result is 8 or more
 after moving backwards, it sets the distance to 8)
 
@@ -131,6 +133,20 @@ void print_status(int player, struct match* game){
 		printf("Opponents Healing Potions Left: %i\n", player_data_b.healing_potions);
 	}
 	return;
+}
+
+int get_input(){ //gets input after print menu
+	//print input line
+	int p;
+	while(1){
+		printf("\nSelect an Option: ");
+		scanf("%i",&p);
+		if (p < 1 || p > 7){
+			continue;
+		}else{
+			return p;
+		}
+	}
 }
 
 struct match* turn(int player, struct match* game){ //deals with input and actions of player one or two
