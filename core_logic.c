@@ -4,6 +4,23 @@ core_logic.c
 Liam Muir, 2019,
 
 implementations of functions that are used as the main logic while game is in progress.
+
+Combat system spec:
+
+attacks are done by determining a random number between one and twenty.
+
+if the number exeeds the ac of the opponent, the attack hits.
+
+all weapons have a bonus to the attack roll, it is added. negative bonuses are allowed.
+
+the players can't move backwards if the distance is eight (to account for random 1 or 2 forwards or backwards, if the final result is 8 or more
+after moving backwards, it sets the distance to 8)
+
+the players can't move forwards if the distance is one (to account for random 1 or 2 forwards or backwards, if the final result is 1 or less 
+after moving forwards, it sets the distance to 1)
+
+
+
 */
 
 #include <stdio.h>
@@ -22,7 +39,7 @@ struct dice{
 	int max;
 };
 
-struct attack attacktable[6] = {{3,2},{1,1},{1,3},{2,2},{5,-2},{1,3}}; //starts with fireball data, goes to dagger data, in up-down, left right order,
+struct attack attacktable[6] = {{3,2},{1,1},{1,3},{2,2},{5,-1},{1,3}}; //starts with fireball data, goes to dagger data, in up-down, left right order,
 //data order is range, bonus
 
 int actable[3] = {11,14,12}; //based on numbers for each class offered on help string, goes in order of mage, knight, archer
