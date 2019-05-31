@@ -26,7 +26,7 @@ Choose your special perk!
 
 Knight vs !
 
-Your Turn:
+Your Turn, Player One!
 
 (player/opponent can move once and attack/perk once, and status unlimited times)
 
@@ -76,37 +76,37 @@ output during any attack
 
 Rolling... (waits two seconds)
 
-if in range and succesful
+#if in range and succesful
 
 Your attack has hit your opponent!
 
-if in range and not succesful
+#if in range and not succesful
 
 Your attack did not hit your opponent...
 
-if not in range and succesful
+#if not in range and succesful
 
 Your attack did not reach your opponent...
 
-all cases
+#all cases
 
 Your attack did (x) damage.
 
-if opponent dead
+#if opponent dead
 
 You Win! (end)
 
 Opponents Turn... (waits 5 seconds)
 
-only attack/perk
+#only attack/perk
 
 Opponent used (attack/perk).
 
-attack/perk and move
+#attack/perk and move
 
 Opponent used (attack/perk) and moved (back,forwards).
 
-all cases
+#all cases
 
 The attack did (x) damage.
 

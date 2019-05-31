@@ -91,6 +91,7 @@ struct match* initgame(){ //initalizes game
 	game->p1 = *beginPlayer();
 	printf("\nPlayer two,\n");
 	game->p2 = *beginPlayer();
+	game->distance = 2;
 	printClassVs(game);
 	return game;
 }

@@ -13,5 +13,5 @@ a test file to ensure that functions are working as expected
 #include "structs.h"
 
 int main(int argc, char const *argv[]){
-	
+
 }

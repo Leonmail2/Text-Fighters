@@ -56,7 +56,7 @@ struct dice healingpotion = {4,8}; //one off for healing perk
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 //combat helpers
 
-int dice(int min,int max){
+int dice(int min, int max){
 	//set seed to current time
 	time_t seed = time(NULL);
 	srandom(seed);
@@ -66,6 +66,34 @@ int dice(int min,int max){
 	return (random() % (max - min))+min;
 }
 
+int calculate_hit(struct match* game, int attack_num, int target, int player_num){ //attack is one or two
+	struct player p_info;
+	if (player_num == 1){
+		p_info = game->p1;
+	}else if(player_num == 2){
+		p_info = game->p2;
+	}else{
+		return -1;
+	}
+	//using attack array, get index for dice and data by using index calculation
+	//index is ((p_info class times two) - 2) + (attack_num-1)
+	int index = ((p_info.class * 2)-2)+(attack_num-1);
+	
+	//check if attack is in range
+	if(attacktable[index].range < game->distance){
+		return 0;
+	}
+	//if not, return 0
+	//calculate dice roll with dice table and add/subtract bonus from attack table
+	int r = dice(1,20);
+	//if its more than o_info ac, then return 2
+	if (r >= target){
+		return 2;
+	}else{
+		return 1;
+	}
+	//if its less than o_info ac, then return 1
+}
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 //menu functions

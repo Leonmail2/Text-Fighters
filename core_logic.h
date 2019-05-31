@@ -16,6 +16,8 @@ struct match;
 
 int dice(int min, int max);
 
+int calculate_hit(struct match* game, int attack_num, int target, int player_num);
+
 void print_menu(int player, struct match* game); //prints action menu
 
 void print_status(int player, struct match* game); //prints status of player

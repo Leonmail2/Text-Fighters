@@ -28,7 +28,7 @@ struct player{
 struct match{
 	struct player p1;
 	struct player p2;
-	int distance_between;
+	int distance;
 };
 
 #endif
