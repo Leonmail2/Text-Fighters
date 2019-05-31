@@ -102,6 +102,34 @@ int damage(int class, int attack_num){//calculates damage from attack with class
 	return dice(dicetable[index].min, dicetable[index].max);
 }
 
+void move_forwards(struct match* game){
+	//randomly generate number between 1 and 2
+	int r = dice(1,2);
+	//if distance - random number is equal or less than 1
+	if (game->distance - r <= 1){
+		game->distance = 1;
+	}else{
+		game->distance -= r;
+	}
+	//set distance to one
+	//else
+	//distans equals distance minis random number
+}
+
+void move_backwards(struct match* game){
+	//randomly generate number between 1 and 2
+	int r = dice(1,2);
+	//if distance - random number is more or equal to 1
+	if (game->distance + r >= 8){
+		game->distance = 8;
+	}else{
+		game->distance += r;
+	}
+	//set distance to one
+	//else
+	//distans equals distance minis random number
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 //menu functions
 
