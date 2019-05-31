@@ -63,7 +63,7 @@ int dice(int min, int max){
 	//uses seed for debuging purposes
 	//make random number p between min and max
 	//return the number
-	return (random() % (max - min))+min;
+	return (random() % (max - min + 1))+min;
 }
 
 int calculate_hit(struct match* game, int attack_num, int target, int player_num){ //attack is one or two
@@ -85,7 +85,7 @@ int calculate_hit(struct match* game, int attack_num, int target, int player_num
 	}
 	//if not, return 0
 	//calculate dice roll with dice table and add/subtract bonus from attack table
-	int r = dice(1,20);
+	int r = dice(1,20) + attacktable[index].bonus;
 	//if its more than o_info ac, then return 2
 	if (r >= target){
 		return 2;
@@ -93,6 +93,13 @@ int calculate_hit(struct match* game, int attack_num, int target, int player_num
 		return 1;
 	}
 	//if its less than o_info ac, then return 1
+}
+
+int damage(int class, int attack_num){//calculates damage from attack with class and attack number
+	//get index for attack
+	int index = ((class * 2)-2)+(attack_num-1);
+	//calulate and return
+	return dice(dicetable[index].min, dicetable[index].max);
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
