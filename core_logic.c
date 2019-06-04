@@ -170,13 +170,13 @@ void print_menu(int player, struct match* game){
 			printf("1. Bow\n2. Dagger\n");
 		}
 
-		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
+		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n7. Nothing\n"); //prints rest of regular actions
 
 		if (game->p1.perk == GAUNT){ //if else for special perks that give an extra action
-			printf("7. Gauntlets\n");
+			printf("8. Gauntlets\n");
 		} else if(game->p1.perk == HEAL){
 			if (game->p1.healing_potions > 0){
-				printf("7. Healing Potions\n");
+				printf("8. Healing Potions\n");
 			}		
 		}
 	}else if(player == 2){//if player is two, execute instructions for the player two
@@ -200,9 +200,6 @@ void print_menu(int player, struct match* game){
 	}else{ //don't continue if different
 		return;
 	}
-
-	
-	return;
 }
 
 void print_status(int player, struct match* game){
@@ -259,13 +256,69 @@ int get_input(){ //gets input after print menu
 //high level functions
 
 struct match* turn(int player, struct match* game){ //deals with input and actions of player one or two
+	//make attack_num variable and set to 0
+	//make move variable and set it to 0
+	//reset parry
+	//enter loop
+	//print "Your turn, player x!"
 	//print list of actions based on player class and perk (calls print_menu)
-	print_menu(player, game);
 	//get input from command line
+
 	//if attack one
-	//call calculate hit
-	//if attack two
-	//
+	//set attack_num to 1
+
+	//else if attack two
+	//set attack_num to 2
+	
+	//else if parry
+	//call parry function
+
+	//else if move_forwards
+	//if move variable is 0
+	//move forwards
+	//set move variable to 1
+	//continue
+
+	//else if move_backwards
+	//if move variable is 0
+	//move backwards
+	//set move variable to 1
+	//continue
+
+	//else if status
+	//print status
+	//continue
+
+	//else if nothing
+	//break
+
+	//else if special perk
+	//if perk is potions
+	//if potions left is more than or equal to one
+	//potions left decrement
+	//hp is hp plus dice of healing potion
+	//continue
+
+	//if move variable is not equal to 0
+	//if move is more than one
+	//move forwards
+	//if move is less than one
+	//move backwards
+
+	//if attack_num is not equal to 0
+	//call calculate hit with attack two towards opponent
+	//if not in range, 
+	//error message
+	//set attack_num to 0
+	//continue
+
+	//if a hit
+	//print "your attack hit"
+	//calculate damage and 
+	//break
+	//else
+	//print "your attack did not hit"
+	//break
 }
 
 int dead(int player, struct match* game){ //chects if player is dead

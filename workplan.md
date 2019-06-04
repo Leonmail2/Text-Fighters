@@ -30,8 +30,8 @@ Finish testing and debugging print menu and and print status to ensure they work
 
 ## Thursday, May 30
 
-Work on combat system helper functions.
+Work on games combat system helper functions.
 
-## Tuesday, June 
+## Tuesday, June 4
 
 Use helpers to implement turn function.

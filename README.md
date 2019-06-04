@@ -38,7 +38,8 @@ for archer
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
-7. (insert special perk, magic does not show up here)
+7. Nothing
+8. (insert special perk, magic does not show up here)
 
 for knight
 
@@ -48,7 +49,8 @@ for knight
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
-7. (insert special perk, magic does not show up here)
+7. Nothing
+8. (insert special perk, magic does not show up here)
 
 for mage
 
@@ -58,7 +60,8 @@ for mage
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
-7. (insert special perk, magic does not show up here)
+7. Nothing
+8. (insert special perk, magic does not show up here)
 
 when status is selected
 
