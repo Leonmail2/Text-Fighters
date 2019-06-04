@@ -1,5 +1,12 @@
 all: text_fighters
 
+addall:
+	git add --all
+
+push:
+	git push origin dev
+
+
 run: text_fighters
 	./text_fighters
 
