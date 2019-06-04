@@ -4,15 +4,13 @@
 
 Ensure current code works and meshes together well. Done.
 
-When this is done, work on print_menu and print_status. TODO
+When this is done, work on print_menu and print_status. Done
 
-Once done, integrate functions into turn function. TODO
-
-After the integration, work on creating combat functions for turn function. TODO
+After the integration, work on creating combat functions for turn function. Done.
 
 ## Week Two (May 28 - June 3):
 
-Work some more on specific combat functions. TODO
+Work some more on specific combat functions. Done.
 
 System test TODO
 
@@ -32,8 +30,12 @@ Work on implementing print menu and print status functions, and ensure they prin
 
 ## Thursday, May 23
 
-Finish testing and debugging
+Finish testing and debugging print menu and and print status.
 
 ## Thursday, May 30
 
-Work on combat system
+Work on combat system helper functions.
+
+## Tuesday, June 
+
+Use helpers to implement turn function.
