@@ -13,16 +13,5 @@ a test file to ensure that functions are working as expected
 #include "structs.h"
 
 int main(int argc, char const *argv[]){
-	struct match* game = initgame();
-	game->distance = 8;
-	for (int i = 0; i < 5; ++i){
-		move_forwards(game);
-		printf("%i\n", game->distance);
-		sleep(1);
-	}
-	for (int i = 0; i < 5; ++i){
-		move_backwards(game);
-		printf("%i\n", game->distance);
-		sleep(1);
-	}
+	
 }

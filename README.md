@@ -34,7 +34,7 @@ for archer
 
 1. Bow
 2. Dagger
-3. Block
+3. Parry
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
@@ -44,7 +44,7 @@ for knight
 
 1. Sword
 2. Lance
-3. Block
+3. Parry
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
@@ -54,7 +54,7 @@ for mage
 
 1. Fireball
 2. Staff
-3. Block
+3. Parry
 4. Move Forwards (this will randomly move 1 or 2 forwards)
 5. Move Backwards (this will randomly move 1 or 2 back)
 6. Status
@@ -100,11 +100,11 @@ Opponents Turn... (waits 5 seconds)
 
 #only attack/perk
 
-Opponent used (attack/perk).
+Opponent used (attack/parry/perk).
 
 #attack/perk and move
 
-Opponent used (attack/perk) and moved (back,forwards).
+Opponent used (attack/parry/perk) and moved (back/forwards).
 
 #all cases
 

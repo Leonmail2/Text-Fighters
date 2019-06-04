@@ -23,6 +23,7 @@ struct player{
 	int class;
 	int perk;
 	int healing_potions;
+	int parry;
 };
 
 struct match{

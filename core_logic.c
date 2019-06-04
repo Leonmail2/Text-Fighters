@@ -130,6 +130,32 @@ void move_backwards(struct match* game){
 	//distans equals distance minis random number
 }
 
+void parry(struct match* game, int player_num){ //parry adds +3 ac
+	//set player one parry to 1 if player one
+	//set player two parry to 1 if player two
+	if (player_num == 1){
+		game->p1.parry = 1;
+	}else if(player_num == 2){
+		game->p2.parry = 1;
+	}else{
+		return;
+	}
+
+}
+
+void reset_parry(struct match* game, int player_num){ //parry adds +3 ac
+	//set player one parry to 1 if player one
+	//set player two parry to 1 if player two
+	if (player_num == 1){
+		game->p1.parry = 0;
+	}else if(player_num == 2){
+		game->p2.parry = 0;
+	}else{
+		return;
+	}
+
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 //menu functions
 
@@ -162,13 +188,13 @@ void print_menu(int player, struct match* game){
 			printf("1. Bow\n2. Dagger\n");
 		}
 
-		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n"); //prints rest of regular actions
+		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n7. Nothing\n"); //prints rest of regular actions
 
 		if (game->p2.perk == GAUNT){ //if else for special perks that give an extra action
-			printf("7. Gauntlets\n");
+			printf("8. Gauntlets\n");
 		} else if(game->p2.perk == HEAL){
 			if (game->p2.healing_potions > 0){
-				printf("7. Healing Potions\n");
+				printf("8. Healing Potions\n");
 			}		
 		}
 	}else{ //don't continue if different
@@ -221,7 +247,7 @@ int get_input(){ //gets input after print menu
 	while(1){
 		printf("\nSelect an Option: ");
 		scanf("%i",&p);
-		if (p < 1 || p > 7){
+		if (p < 1 || p > 8){
 			continue;
 		}else{
 			return p;
@@ -234,10 +260,12 @@ int get_input(){ //gets input after print menu
 
 struct match* turn(int player, struct match* game){ //deals with input and actions of player one or two
 	//print list of actions based on player class and perk (calls print_menu)
+	print_menu(player, game);
 	//get input from command line
 	//if attack one
-	//lookup attack variables based on class from attacks.h
+	//call calculate hit
 	//if attack two
+	//
 }
 
 int dead(int player, struct match* game){ //chects if player is dead

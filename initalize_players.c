@@ -92,19 +92,8 @@ struct match* initgame(){ //initalizes game
 	printf("\nPlayer two,\n");
 	game->p2 = *beginPlayer();
 	game->distance = 2;
+	game->p1.parry = 0;
+	game->p2.parry = 0;
 	printClassVs(game);
 	return game;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

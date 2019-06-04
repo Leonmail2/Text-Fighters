@@ -24,6 +24,13 @@ void move_forwards(struct match* game);
 
 void move_backwards(struct match* game);
 
+void parry(struct match* game, int player_num);
+
+void reset_parry(struct match* game, int player_num);
+
+//------------------------------------------------------------------------
+//output functions
+
 void print_menu(int player, struct match* game); //prints action menu
 
 void print_status(int player, struct match* game); //prints status of player
