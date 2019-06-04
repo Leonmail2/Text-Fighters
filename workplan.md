@@ -1,5 +1,10 @@
 # Work Plan
 
+Goal of project is to create a playable text based multiplayer fighting game. 
+Major Goal 1: Player initilization. Done.
+Major Goal 2: Combat system. Almost Done.
+Major Goal 3: Main File. TODO.
+
 1. Create a sample interaction as a template for the UI and the game. DONE
 2. Start implementation by creating a data structure to hold data about players and the current instance of the game. Implemented in structs.h DONE
 3. Write functions that will, in the format of the template ask questions to the users and stores the answers in a struct. DONE
