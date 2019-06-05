@@ -40,3 +40,7 @@ Work on games combat system helper functions.
 ## Tuesday, June 4
 
 Use helpers to implement turn function.
+
+## Wednsday, June 5
+
+Implement turn function from psudocode.
