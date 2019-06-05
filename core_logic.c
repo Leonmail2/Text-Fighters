@@ -28,6 +28,7 @@ after moving forwards, it sets the distance to 1)
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "structs.h"
 #include "core_logic.h"
 
@@ -42,7 +43,7 @@ struct dice{
 	int max;
 };
 
-struct attack attacktable[6] = {{3,2},{1,1},{1,3},{2,2},{5,-1},{1,3}}; //starts with fireball data, goes to dagger data, in up-down, left right order,
+struct attack attacktable[6] = {{3,1},{1,2},{1,3},{2,2},{5,-1},{1,3}}; //starts with fireball data, goes to dagger data, in up-down, left right order,
 //data order is range, bonus
 
 int actable[3] = {11,14,12}; //based on numbers for each class offered on help string, goes in order of mage, knight, archer
@@ -50,7 +51,9 @@ int actable[3] = {11,14,12}; //based on numbers for each class offered on help s
 struct dice dicetable[6] = {{5,7},{3,5},{5,6},{2,4},{6,7},{2,5}};//starts with fireball, goes to dagger, in up-down, left right order
 //data order is min, max
 
-struct dice gauntlets = {3,7}; //one off for gauntlets perk
+struct dice gauntletdice = {3,7}; //one off
+
+struct attack gauntlets = {1,1}; //one off
 
 struct dice healingpotion = {4,8}; //one off for healing perk
 //---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -95,11 +98,46 @@ int calculate_hit(struct match* game, int attack_num, int target, int player_num
 	//if its less than o_info ac, then return 1
 }
 
+int calculate_gauntlet_hit(struct match* game, int target, int player_num){
+	struct player p_info;
+	if (player_num == 1){
+		p_info = game->p1;
+	}else if(player_num == 2){
+		p_info = game->p2;
+	}else{
+		return -1;
+	}
+	if (p_info.perk != GAUNT){
+		return -1;
+	}
+	//using attack array, get index for dice and data by using index calculation
+	//index is ((p_info class times two) - 2) + (attack_num-1)
+	
+	//check if attack is in range
+	if(gauntlets.range < game->distance){
+		return 0;
+	}
+	//if not, return 0
+	//calculate dice roll with dice table and add/subtract bonus from attack table
+	int r = dice(1,20) + gauntlets.bonus;
+	//if its more than o_info ac, then return 2
+	if (r >= target){
+		return 2;
+	}else{
+		return 1;
+	}
+	//if its less than o_info ac, then return 1
+}
+
 int damage(int class, int attack_num){//calculates damage from attack with class and attack number
 	//get index for attack
 	int index = ((class * 2)-2)+(attack_num-1);
 	//calulate and return
 	return dice(dicetable[index].min, dicetable[index].max);
+}
+
+int gauntlet_damage(){
+	return dice(gauntletdice.min,gauntletdice.max);
 }
 
 void move_forwards(struct match* game){
@@ -160,20 +198,51 @@ void reset_parry(struct match* game, int player_num){ //parry adds +3 ac
 //menu functions
 
 void print_menu(int player, struct match* game){
+	char melee[5];
+	char bow[5];
+	char lance[5];
+	char fireball[5];
+	if (game->distance > attacktable[5].range){
+		strcpy(melee,"not ");
+	}else{
+		strcpy(melee,"");
+	}
+	if (game->distance > attacktable[4].range){
+		strcpy(bow,"not ");
+	}else{
+		strcpy(bow,"");
+	}
+	if (game->distance > attacktable[3].range){
+		strcpy(lance,"not ");
+	}else{
+		strcpy(lance,"");
+	}
+	if (game->distance > attacktable[0].range){
+		strcpy(fireball,"not ");
+	}else{
+		strcpy(fireball,"");
+	}
 
 	if (player == 1){	//if player is one, execute code for the player one
+		int index = ((game->p1.class * 2)-2);
 		if (game->p1.class == MAGE){ // if then else for printing the first two items
-			printf("1. Fireball\n2. Staff\n",);
+			printf("1. Fireball (%sin range)\n2. Staff (%sin range)\n",fireball,melee);
 		} else if (game->p1.class == KNIGHT){
-			printf("1. Sword\n2. Lance\n",);
+			printf("1. Sword (%sin range)\n2. Lance (%sin range)\n",melee,lance);
 		} else if (game->p1.class == ARCHER){
-			printf("1. Bow\n2. Dagger\n",);
+			printf("1. Bow (%sin range)\n2. Dagger (%sin range)\n",bow,melee);
 		}
 
 		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n7. Nothing\n"); //prints rest of regular actions
 
 		if (game->p1.perk == GAUNT){ //if else for special perks that give an extra action
-			printf("8. Gauntlets\n");
+			char no[5];
+			if (game->distance > gauntlets.range){
+				strcpy(no,"not ");
+			}else{
+				strcpy(no,"");
+			}
+			printf("8. Gauntlets (%sin range)\n", no);
 		} else if(game->p1.perk == HEAL){
 			if (game->p1.healing_potions > 0){
 				printf("8. Healing Potions\n");
@@ -181,17 +250,23 @@ void print_menu(int player, struct match* game){
 		}
 	}else if(player == 2){//if player is two, execute instructions for the player two
 		if (game->p2.class == MAGE){ // if then else for printing the first two items
-			printf("1. Fireball\n2. Staff\n",);
+			printf("1. Fireball (%sin range)\n2. Staff (%sin range)\n",fireball,melee);
 		} else if (game->p2.class == KNIGHT){
-			printf("1. Sword\n2. Lance\n",);
+			printf("1. Sword (%sin range)\n2. Lance (%sin range)\n",melee,lance);
 		} else if (game->p2.class == ARCHER){
-			printf("1. Bow\n2. Dagger\n",);
+			printf("1. Bow (%sin range)\n2. Dagger (%sin range)\n",bow,melee);
 		}
 
 		printf("3. Block\n4. Move Forwards\n5. Move Backwards\n6. Status\n7. Nothing\n"); //prints rest of regular actions
 
 		if (game->p2.perk == GAUNT){ //if else for special perks that give an extra action
-			printf("8. Gauntlets, (%sin range)\n",);
+			char no[5];
+			if (game->distance > gauntlets.range){
+				strcpy(no,"not ");
+			}else{
+				strcpy(no,"");
+			}
+			printf("8. Gauntlets (%sin range)\n", no);
 		} else if(game->p2.perk == HEAL){
 			if (game->p2.healing_potions > 0){
 				printf("8. Healing Potions\n");
