@@ -4,6 +4,8 @@ structs.h
 Liam Muir, 2019
 
 include in all files that use player structs.
+
+due to pointer problems, you have to access the player data with thr notation of match->p1.datafield
 */
 
 #ifndef __STRUCTS__
