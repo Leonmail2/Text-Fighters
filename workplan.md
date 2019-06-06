@@ -44,3 +44,7 @@ Use helpers to implement turn function.
 ## Wednsday, June 5
 
 Implement turn function from psudocode.
+
+## Thursday June 6
+
+Continue on implementing damage and combat in the turn function. 
