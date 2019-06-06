@@ -26,8 +26,10 @@ static int getBeginData(char* question,char* option_one, char* option_two, char*
 		printf("\n%s\n\n", question);
 		printf("1:%s, 2:%s, 3:%s, 4:help: ", option_one, option_two, option_three);
 		int answer;
-		scanf("%i", &answer);
-			switch(answer){
+		char input[30];
+		fgets(input,30,stdin);
+		answer = atoi(input);
+		switch(answer){
 			case 1:
 			return 1; 
 			break;
@@ -39,6 +41,8 @@ static int getBeginData(char* question,char* option_one, char* option_two, char*
 			break;
 			case 4:
 			printf("\n%s\n", help_text);
+			break;
+			default:
 			break;
 		}
 	}
