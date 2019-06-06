@@ -7,9 +7,9 @@ struct match;
 
 int dice(int min, int max);
 
-int calculate_hit(struct match* game, int attack_num, int target, int player_num);
+int calculate_hit(struct match* game, int player_num, int attack_num, int target);
 
-int calculate_gauntlet_hit(struct match* game, int target, int player_num);
+int calculate_gauntlet_hit(struct match* game, int player_num, int target);
 
 int damage(int class, int attack_num);
 

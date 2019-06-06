@@ -47,7 +47,7 @@ int dice(int min, int max){
 	return (random() % (max - min + 1))+min;
 }
 
-int calculate_hit(struct match* game, int attack_num, int target, int player_num){ //attack is one or two
+int calculate_hit(struct match* game, int player_num, int attack_num, int target){ //attack is one or two
 	struct player p_info;
 	if (player_num == 1){
 		p_info = game->p1;
@@ -76,7 +76,7 @@ int calculate_hit(struct match* game, int attack_num, int target, int player_num
 	//if its less than o_info ac, then return 1
 }
 
-int calculate_gauntlet_hit(struct match* game, int target, int player_num){
+int calculate_gauntlet_hit(struct match* game, int player_num, int target){
 	struct player p_info;
 	if (player_num == 1){
 		p_info = game->p1;
