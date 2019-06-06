@@ -71,6 +71,7 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 		}else if(input == 3){
 			//call parry function
 			parry(game, player);
+			break;
 		}else if(input == 4){
 		//if move variable is 0
 		//move forwards
@@ -133,7 +134,7 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 		if (attack_num != 0){
 			int hit;
 			if (attack_num == 1 || attack_num == 2){
-				hit = calculate_hit(game, player, attack_num, op->ac);
+				hit = calculate_hit(game, player, attack_num, op->ac + (op->parry*3));//adds three if parry is enabled
 			}else if(attack_num == 3){
 				hit = calculate_gauntlet_hit(game, player, op->ac);
 			}else{

@@ -310,9 +310,12 @@ int get_input(){ //gets input after print menu
 	int p;
 	while(1){
 		printf("\nSelect an Option: ");
-		scanf("%i",&p);
+		char input[30];
+		fgets(input, 30, stdin);
+		printf("\n");
+		p = atoi(input);
 		if (p < 1 || p > 8){
-			continue;
+			return 0;
 		}else{
 			return p;
 		}

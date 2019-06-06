@@ -86,6 +86,7 @@ static void printClassVs(struct match* game){ //prints versus message
 		printf("Knight!\n");
 		break;
 	}
+	printf("\n");
 }
 
 struct match* initgame(){ //initalizes game

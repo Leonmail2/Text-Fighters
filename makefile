@@ -18,8 +18,8 @@ test: core_logic.o conbat_helpers.o initalize_players.o test.o combat_helpers.o
 test.o: test.c
 	gcc -c test.c
 
-text_fighters: core_logic.o initalize_players.o main.o
-	gcc core_logic.o initalize_players.o main.o -o text_fighters
+text_fighters: core_logic.o initalize_players.o combat_helpers.o main.o
+	gcc core_logic.o initalize_players.o combat_helpers.o main.o -o text_fighters
 
 core_logic.o: core_logic.c core_logic.h
 	gcc -c core_logic.c core_logic.h
