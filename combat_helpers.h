@@ -21,6 +21,8 @@ void parry(struct match* game, int player_num);
 
 void reset_parry(struct match* game, int player_num);
 
+void add_health(struct match* game, int player_num);
+
 //------------------------------------------------------------------------
 //output functions
 

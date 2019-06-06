@@ -11,7 +11,6 @@ File to hold all functions that turn function uses
 #include <time.h>
 #include <string.h>
 #include "structs.h"
-#include "core_logic.h"
 
 struct attack{
 	//data for attack
@@ -173,6 +172,20 @@ void reset_parry(struct match* game, int player_num){ //parry adds +3 ac
 
 }
 
+void add_health(struct match* game, int player_num){
+	if (player_num == 1){
+		if (game->p1.perk == HEAL){
+			game->p1.hp = game->p1.hp + dice(healingpotion.min,healingpotion.max);
+		}
+	}else if (player_num == 2){
+		if (game->p2.perk == HEAL){
+			game->p2.hp = game->p2.hp + dice(healingpotion.min,healingpotion.max);
+		}
+	}else{
+		return;
+	}
+}
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 //menu functions
 
@@ -224,7 +237,7 @@ void print_menu(struct match* game, int player){
 			printf("8. Gauntlets (%sin range)\n", no);
 		} else if(game->p1.perk == HEAL){
 			if (game->p1.healing_potions > 0){
-				printf("8. Healing Potions\n");
+				printf("8. Healing Potions (%i left)\n",game->p1.healing_potions);
 			}		
 		}
 	}else if(player == 2){//if player is two, execute instructions for the player two
@@ -248,7 +261,7 @@ void print_menu(struct match* game, int player){
 			printf("8. Gauntlets (%sin range)\n", no);
 		} else if(game->p2.perk == HEAL){
 			if (game->p2.healing_potions > 0){
-				printf("8. Healing Potions\n");
+				printf("8. Healing Potions (%i left)\n",game->p2.healing_potions);
 			}		
 		}
 	}else{ //don't continue if different
