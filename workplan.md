@@ -10,7 +10,7 @@ Major Goal 3: Main File. TODO.
 3. Write functions that will, in the format of the template ask questions to the users and stores the answers in a struct. DONE
 4. Bundle initalization functions into a single function. DONE
 5. Develop combat system and write helper functions. DONE
-6. Implement turn function that uses combat system helpers. TODO
+6. Implement turn function that uses combat system helpers. DONE
 7. Finalize helper functions for main file. TODO
 8. Use all functions to implement the main file. TODO
 9. Merge dev with master. TODO
