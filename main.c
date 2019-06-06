@@ -9,31 +9,25 @@ main file to launch game.
 #include <stdio.h>
 #include <stdlib.h>
 #include "structs.h"
+#include "combat_helpers.h"
 #include "initalize_players.h"
 #include "core_logic.h"
 
 int main(){
-	/*
-	Proposed logic
-
 	while(1){ //when game is over start here again
 	struct match* game = initgame();
 		while(1){ //main loop for the cycle of play
-			turn(1,game); //player one's turn
-			if(dead(2,game)){ //checks if opponent is dead
+			turn(game,1); //player one's turn
+			if(dead(game,2)){ //checks if opponent is dead
 				break; //stop the game
 			}
-			turn(2,game); //player two's turn
-			if(dead(1,game)){ //checks if opponent is dead
+			turn(game,2); //player two's turn
+			if(dead(game,1)){ //checks if opponent is dead
 				break; //stop the game
 			}
 		}
 		resolve(game); //say who won
 		free(game);
-		if (!playagain()){ //if player does not wants to play again
-			break; //end game
-		}
 	}
-	*/
 	return 0;
 }
