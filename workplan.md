@@ -11,13 +11,14 @@ Major Goal 3: Main File. TODO.
 4. Bundle initalization functions into a single function. DONE
 5. Develop combat system and write helper functions. DONE
 6. Implement turn function that uses combat system helpers. DONE
-7. Finalize helper functions for main file. TODO
+7. Finalize helper functions for main file. DONE
 8. Use all functions to implement the main file. TODO
-9. Merge dev with master. TODO
+9. Merge dev with master and stable. TODO
 10. Remove test.c and other test related content. TODO
 11. Update makefile. TODO
-12. Write instructions in README.md
-13. Remove workplan.md
+12. Write instructions in README.md TODO
+13. Remove workplan.md TODO
+14. Finish stuff with github TODO
 
 # Daily Goals
 

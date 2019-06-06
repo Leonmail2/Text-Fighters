@@ -208,6 +208,12 @@ void resolve(struct match* game){ //says who won
 	//if player two is dead
 	//player one wins
 	//print (Player (x), you have won!)
+	if(dead(game,1)){
+		printf("Player Two Wins!\n");
+	}else if(dead(game,2)){
+		printf("Player One Wins!\n");
+	}
+	
 }
 
 int playagain(){ //asks player if they want to play again
