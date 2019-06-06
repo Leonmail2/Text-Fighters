@@ -1,19 +1,7 @@
 all: text_fighters
 
-addall:
-	git add --all
-
-push:
-	git push origin dev
-
-
 run: text_fighters
 	./text_fighters
-
-test: core_logic.o conbat_helpers.o initalize_players.o test.o combat_helpers.o
-	gcc core_logic.o initalize_players.o test.o combat_helpers.o -o test
-	./test
-	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch combat_helpers.h.gch combat_helpers.o test test.o
 
 test.o: test.c
 	gcc -c test.c
