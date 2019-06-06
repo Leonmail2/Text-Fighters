@@ -173,7 +173,7 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 			
 		}
 	}
-
+	return 0;
 }
 
 int dead(struct match* game, int player){ //chects if player is dead
@@ -216,11 +216,3 @@ void resolve(struct match* game){ //says who won
 	
 }
 
-int playagain(){ //asks player if they want to play again
-	//print "Do you want to play again? (y/n): "
-	//get input
-	//if answer is y, return 1
-	//else return 0
-}
-
-//---------------------------------------------------------------------------------------------------------------------------------------------------
