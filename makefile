@@ -10,10 +10,10 @@ push:
 run: text_fighters
 	./text_fighters
 
-test: core_logic.o initalize_players.o test.o
-	gcc core_logic.o initalize_players.o test.o -o test
+test: core_logic.o conbat_helpers.o initalize_players.o test.o combat_helpers.o
+	gcc core_logic.o initalize_players.o test.o combat_helpers.o -o test
 	./test
-	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch test test.o
+	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch combat_helpers.h.gch combat_helpers.o test test.o
 
 test.o: test.c
 	gcc -c test.c
@@ -27,8 +27,11 @@ core_logic.o: core_logic.c core_logic.h
 initalize_players.o: initalize_players.c initalize_players.h
 	gcc -c initalize_players.c initalize_players.h
 
+conbat_helpers.o: combat_helpers.c combat_helpers.h
+	gcc -c combat_helpers.c combat_helpers.h
+
 main.o: main.c
 	gcc -c main.c
 
 clean:
-	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch test test.o
+	rm core_logic.o initalize_players.o main.o structs.o text_fighters initalize_players.h.gch core_logic.h.gch structs.h.gch combat_helpers.h.gch combat_helpers.o test test.o
