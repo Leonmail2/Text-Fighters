@@ -13,6 +13,8 @@ int calculate_gauntlet_hit(struct match* game, int player_num, int target);
 
 int damage(int class, int attack_num);
 
+int gauntlet_damage();
+
 void move_forwards(struct match* game);
 
 void move_backwards(struct match* game);

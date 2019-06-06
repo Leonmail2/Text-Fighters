@@ -186,7 +186,20 @@ int dead(struct match* game, int player){ //chects if player is dead
 	//return 1
 	//else return 0
 	//else
-	//return 0;
+	//return -1;
+	if (player == 1){
+		if (game->p1.hp <= 0)
+			return 1;
+		else
+			return 0;
+	}else if (player == 2){
+		if (game->p2.hp <= 0)
+			return 1;
+		else
+			return 0;
+	}else{
+		return -1;
+	}
 }
 
 void resolve(struct match* game){ //says who won

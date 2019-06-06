@@ -14,8 +14,5 @@ a test file to ensure that functions are working as expected
 #include "structs.h"
 
 int main(int argc, char const *argv[]){
-	struct match* game = initgame();
-	printf("hp op: %i\n", game->p2.hp);
-	turn(game,1);
-	printf("hp op: %i\n", game->p2.hp);
+	
 }
