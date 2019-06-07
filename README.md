@@ -6,6 +6,21 @@ You can choose from three classes and three perks to give you an edge against yo
 
 Turn based combat allows for advanced strategy and tactical moves.
 
+# Building
+
+Build with the commands below on unix based operating systems.
+
+```shell
+make
+./text_fighters
+```
+or
+
+```shell
+make run
+```
+
+If you're on windows, please switch to Linux before downloading because windows sucks for development and is terrible for everything except gaming.
 
 ## Possible Updates in the Future
 
