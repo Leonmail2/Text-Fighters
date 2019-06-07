@@ -7,9 +7,11 @@ You can choose from three classes and three perks to give you an edge against yo
 Turn based combat allows for advanced strategy and tactical moves.
 
 
-## Future Updates
+## Possible Updates in the Future
 
-
+1. Implementing a multi player system over the Internet.
+2. Adding a score board and matchmaking over the Internet.
+3. Expanding the range of characters.
 
 ## About
 
