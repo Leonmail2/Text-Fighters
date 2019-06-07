@@ -133,10 +133,11 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 		//return
 		if (attack_num != 0){
 			int hit;
+			printf("%i\n", op->parry);
 			if (attack_num == 1 || attack_num == 2){
-				hit = calculate_hit(game, player, attack_num, op->ac + (op->parry*3));//adds three if parry is enabled
+				hit = calculate_hit(game, player, attack_num, op->ac + ((op->parry == 1)*3));//adds three if parry is enabled
 			}else if(attack_num == 3){
-				hit = calculate_gauntlet_hit(game, player, op->ac);
+				hit = calculate_gauntlet_hit(game, player, op->ac + ((op->parry == 1)*3));
 			}else{
 				return -1;
 			}
@@ -158,9 +159,9 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 				printf("Rolling...\n\n");
 				int d;
 				if (attack_num == 1 || attack_num == 2){
-					d = damage(p->class, attack_num);
+					d = damage(p->class, attack_num) + ((p->perk == MAGIC)*3);
 				}else if(attack_num == 3){
-					d = gauntlet_damage();
+					d = gauntlet_damage() + ((p->perk == MAGIC)*3);
 				}else{
 					return -1;
 				}
