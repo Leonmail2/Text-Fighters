@@ -2,8 +2,8 @@
 
 Goal of project is to create a playable text based multiplayer fighting game. 
 Major Goal 1: Player initilization. Done.
-Major Goal 2: Combat system. Almost Done.
-Major Goal 3: Main File. TODO.
+Major Goal 2: Combat system. Done
+Major Goal 3: Main File. Done
 
 1. Create a sample interaction as a template for the UI and the game. DONE
 2. Start implementation by creating a data structure to hold data about players and the current instance of the game. Implemented in structs.h DONE
