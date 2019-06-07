@@ -58,6 +58,8 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 		//enter loop
 		printf("\n");
 		//print list of actions based on player class and perk (calls print_menu)
+		sleep(1);
+
 		print_menu(game, player);
 		//get input from command line
 
@@ -133,7 +135,6 @@ int turn(struct match* game, int player){ //deals with input and actions of play
 		//return
 		if (attack_num != 0){
 			int hit;
-			printf("%i\n", op->parry);
 			if (attack_num == 1 || attack_num == 2){
 				hit = calculate_hit(game, player, attack_num, op->ac + ((op->parry == 1)*3));//adds three if parry is enabled
 			}else if(attack_num == 3){

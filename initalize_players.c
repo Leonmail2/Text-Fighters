@@ -11,6 +11,7 @@ implementations of functions to initalize player data.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "structs.h"
 #include "initalize_players.h"
 
@@ -41,6 +42,7 @@ static int getBeginData(char* question,char* option_one, char* option_two, char*
 			break;
 			case 4:
 			printf("\n%s\n", help_text);
+			sleep(1);
 			break;
 			default:
 			break;
@@ -87,14 +89,17 @@ static void printClassVs(struct match* game){ //prints versus message
 		break;
 	}
 	printf("\n");
+	sleep(1);
 }
 
 struct match* initgame(){ //initalizes game
 	struct match* game = malloc(sizeof(struct match));
 	printf("\nWelcome to Text Fighters!\n");
 	printf("\nPlayer one,\n");
+	sleep(1);
 	game->p1 = *beginPlayer();
 	printf("\nPlayer two,\n");
+	sleep(1);
 	game->p2 = *beginPlayer();
 	game->distance = 2;
 	game->p1.parry = 0;
