@@ -16,9 +16,10 @@ Major Goal 3: Main File. Done
 9. Merge dev with master. DONE
 10. Remove test.c and other test related content. DONE
 11. Update makefile. DONE
-12. Write instructions in README.md TODO
-13. Remove workplan.md in stable TODO
-14. Finish stuff with github TODO
+12. Write instructions in README.md DONE
+13. Merge with stable. TODO
+14. Remove workplan.md in stable TODO
+15. Finish stuff with github TODO
 
 # Daily Goals
 
