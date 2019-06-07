@@ -7,10 +7,10 @@ You can choose from three classes and three perks to give you an edge against yo
 Turn based combat allows for advanced strategy and tactical moves.
 
 
-##Future Updates
+## Future Updates
 
 
 
-##About
+## About
 
 Made by Liam Muir for a grade eleven computer science course as the final assignment.
