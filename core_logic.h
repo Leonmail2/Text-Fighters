@@ -21,6 +21,4 @@ int dead(struct match* game, int player); //chects if player is dead
 
 void resolve(struct match* game); //says who won
 
-int again();
-
 #endif

@@ -14,8 +14,7 @@ main file to launch game.
 #include "core_logic.h"
 
 int main(){
-	struct match* game = initgame();
-	while(1){
+		struct match* game = initgame();
 		while(1){ //main loop for the cycle of play
 			turn(game,1); //player one's turn
 			if(dead(game,2)){ //checks if opponent is dead
@@ -28,12 +27,5 @@ int main(){
 		}
 		resolve(game); //say who won
 		free(game);
-		if (again()){
-			continue;
-		}else{
-			break;
-		}
-	}
-
 	return 0;
 }
