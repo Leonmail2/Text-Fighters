@@ -6,12 +6,34 @@ You can choose from three classes and three perks to give you an edge against yo
 
 Turn based combat allows for advanced strategy and tactical moves.
 
-# Building
+## Playing the Game
+
+Each class has two unique attacks. 
+
+The Mage has fireball and staff. The fireball is a long range weapon that is useful for when your opponent is far away.
+The staff is useful when your enemies try to approch you. The Mage is medium range.
+
+The Knight has a sword and a lance. The sword is used to smite your opponent at close range. The lance is longer range, 
+and does less damage than the sword. Both of the knights attacks are relativly short range.
+
+The Archer posseses a mighty bow and a dagger. The bow has the longest range, and is effective to pick off your enemies
+from a distance. The dagger is great for backstabbing at close range. 
+
+## Building
+
+Clone repository into a folder using:
+```shell
+git clone https://github.com/liammuir/Text-Fighters.git
+```
 
 Build with the commands below on unix based operating systems.
 
 ```shell
 make
+```
+run with
+
+```shell
 ./text_fighters
 ```
 or
@@ -20,7 +42,7 @@ or
 make run
 ```
 
-If you're on windows, please switch to Linux before downloading because windows sucks for development and is terrible for everything except gaming.
+If you're on windows, please switch to Linux before downloading because windows sucks for development.
 
 ## Possible Updates in the Future
 
