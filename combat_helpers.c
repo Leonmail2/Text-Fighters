@@ -286,13 +286,17 @@ void print_status(struct match* game, int player){
 
 
 	//print a health
-	printf("HP: %i\n", player_data_a.hp);
-	//print a ac
-	printf("AC: %i\n", player_data_a.ac);
-	//print healing potions if a has the perk
 	if(player_data_a.perk == HEAL){
 		printf("Healing Potions Left: %i\n", player_data_a.healing_potions);
 	}
+
+	printf("Distance: %i\n", game->distance);
+
+	printf("Your HP: %i\n", player_data_a.hp);
+	//print a ac
+	printf("Your AC: %i\n", player_data_a.ac);
+	//print healing potions if a has the perk
+	
 	//print b health
 	printf("Opponents HP: %i\n", player_data_b.hp);
 	//print b ac

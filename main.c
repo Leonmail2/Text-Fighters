@@ -15,17 +15,29 @@ main file to launch game.
 
 int main(){
 	struct match* game = initgame();
-	while(1){ //main loop for the cycle of play
-		turn(game,1); //player one's turn
-		if(dead(game,2)){ //checks if opponent is dead
-			break; //stop the game
+	while(1){
+		while(1){ //main loop for the cycle of play
+			turn(game,1); //player one's turn
+			if(dead(game,2)){ //checks if opponent is dead
+				break; //stop the game
+			}
+			turn(game,2); //player two's turn
+			if(dead(game,1)){ //checks if opponent is dead
+				break; //stop the game
+			}
 		}
-		turn(game,2); //player two's turn
-		if(dead(game,1)){ //checks if opponent is dead
-			break; //stop the game
+		resolve(game); //say who won
+		free(game);
 		}
+	printf("\n\nDo you want to play again? (y/n): ");
+	char input[10];
+	fgets(input, 10, stdin);
+	if (strcmp(input,"y")==0){
+		printf("\n\n");
+		continue;
+	}else{
+		printf("Thanks for playing!\n\n");
+		break;
 	}
-	resolve(game); //say who won
-	free(game);
 	return 0;
 }
