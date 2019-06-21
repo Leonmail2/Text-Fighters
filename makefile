@@ -8,6 +8,7 @@ test.o: test.c
 
 text_fighters: core_logic.o initalize_players.o combat_helpers.o main.o
 	gcc core_logic.o initalize_players.o combat_helpers.o main.o -o text_fighters
+	echo "\nrun with ./text_fighters"
 
 core_logic.o: core_logic.c core_logic.h
 	gcc -c core_logic.c core_logic.h
