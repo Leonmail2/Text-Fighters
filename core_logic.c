@@ -219,3 +219,16 @@ void resolve(struct match* game){ //says who won
 	
 }
 
+int again(){
+	printf("\n\nDo you want to play again? (y/n): ");
+	char input[10];
+	fgets(input, 10, stdin);
+	if (strcmp(input,"y")==0){
+		printf("\n\n");
+		return 0;
+	}else{
+		printf("Thanks for playing!\n\n");
+		return 1;
+	}
+}
+

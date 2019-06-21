@@ -28,16 +28,12 @@ int main(){
 		}
 		resolve(game); //say who won
 		free(game);
+		if (again()){
+			continue;
+		}else{
+			break;
 		}
-	printf("\n\nDo you want to play again? (y/n): ");
-	char input[10];
-	fgets(input, 10, stdin);
-	if (strcmp(input,"y")==0){
-		printf("\n\n");
-		continue;
-	}else{
-		printf("Thanks for playing!\n\n");
-		break;
 	}
+
 	return 0;
 }
