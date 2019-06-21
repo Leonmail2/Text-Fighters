@@ -19,7 +19,7 @@ Major Goal 3: Main File. Done
 12. Write instructions in README.md DONE
 13. Merge with stable. DONE
 14. Remove workplan.md in stable DONE
-15. Finish stuff with github TODO
+15. Finish configuration with github TODO
 
 # Daily Goals
 
