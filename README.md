@@ -42,7 +42,7 @@ or
 make run
 ```
 
-If you're on windows, please switch to Linux before downloading because windows sucks for development.
+Combatibility on Windows is untested.
 
 ## Possible Updates in the Future
 
