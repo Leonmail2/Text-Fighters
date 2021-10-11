@@ -49,7 +49,3 @@ Combatibility on Windows is untested.
 1. Implementing a multi player system over the Internet.
 2. Adding a score board and matchmaking over the Internet.
 3. Expanding the range of characters.
-
-## About
-
-Made by Liam Muir for a grade eleven computer science course as the final assignment.
