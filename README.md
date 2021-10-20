@@ -23,7 +23,7 @@ from a distance. The dagger is great for backstabbing at close range.
 
 Clone repository into a folder using:
 ```shell
-git clone https://github.com/liammuir/Text-Fighters.git
+git clone https://github.com/Leonmail2/Text-Fighters.git
 ```
 
 Build with the commands below on unix based operating systems.
